@@ -1,0 +1,39 @@
+{
+  "context": {
+    "technical_question": [
+      "yes",
+      "no"
+    ],
+    "beginner_asker": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "r1",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "technical_question": "yes"
+      },
+      "unless": [],
+      "action": "include_code_example",
+      "effect": "require"
+    },
+    {
+      "id": "r2",
+      "sources": [
+        "R02"
+      ],
+      "when": {
+        "beginner_asker": "yes"
+      },
+      "unless": [],
+      "action": "include_code_example",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": []
+}

@@ -1,0 +1,175 @@
+{
+  "context": {
+    "audience": [
+      "internal",
+      "external"
+    ],
+    "meeting_minutes_requested": [
+      "yes",
+      "no"
+    ],
+    "reference_material_provided": [
+      "yes",
+      "no"
+    ],
+    "prepublication_review_request_requested": [
+      "yes",
+      "no"
+    ],
+    "report_requested": [
+      "yes",
+      "no"
+    ],
+    "proposal_requested": [
+      "yes",
+      "no"
+    ],
+    "audience_confirmed": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R02",
+        "R01"
+      ],
+      "when": {
+        "audience": "internal"
+      },
+      "unless": [],
+      "action": "include_internal_material_link",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R03",
+        "R01"
+      ],
+      "when": {
+        "audience": "external"
+      },
+      "unless": [],
+      "action": "include_internal_material_link",
+      "effect": "forbid"
+    },
+    {
+      "id": "q3",
+      "sources": [
+        "R04"
+      ],
+      "when": {
+        "meeting_minutes_requested": "yes"
+      },
+      "unless": [],
+      "action": "include_decisions_section",
+      "effect": "require"
+    },
+    {
+      "id": "q4",
+      "sources": [
+        "R05"
+      ],
+      "when": {
+        "reference_material_provided": "yes"
+      },
+      "unless": [],
+      "action": "include_source_list",
+      "effect": "require"
+    },
+    {
+      "id": "q5",
+      "sources": [
+        "R06"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "include_personal_mobile_number_in_body",
+      "effect": "forbid"
+    },
+    {
+      "id": "q6",
+      "sources": [
+        "R07"
+      ],
+      "when": {
+        "prepublication_review_request_requested": "yes"
+      },
+      "unless": [],
+      "action": "state_review_deadline",
+      "effect": "require"
+    },
+    {
+      "id": "q7",
+      "sources": [
+        "R08"
+      ],
+      "when": {
+        "report_requested": "yes"
+      },
+      "unless": [],
+      "action": "include_creation_date",
+      "effect": "require"
+    },
+    {
+      "id": "q8",
+      "sources": [
+        "R09"
+      ],
+      "when": {
+        "proposal_requested": "yes"
+      },
+      "unless": [],
+      "action": "guarantee_budget_amount",
+      "effect": "forbid"
+    },
+    {
+      "id": "q9",
+      "sources": [
+        "R10"
+      ],
+      "when": {
+        "audience_confirmed": "yes"
+      },
+      "unless": [],
+      "action": "ask_audience",
+      "effect": "forbid"
+    },
+    {
+      "id": "q10",
+      "sources": [
+        "R11",
+        "R12",
+        "R01"
+      ],
+      "when": {
+        "meeting_minutes_requested": "yes"
+      },
+      "unless": [
+        {
+          "audience": "external"
+        }
+      ],
+      "action": "include_overview_section_at_start",
+      "effect": "require"
+    },
+    {
+      "id": "q11",
+      "sources": [
+        "R12",
+        "R01"
+      ],
+      "when": {
+        "meeting_minutes_requested": "yes",
+        "audience": "external"
+      },
+      "unless": [],
+      "action": "include_overview_section_at_start",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": []
+}

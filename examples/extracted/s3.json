@@ -1,0 +1,37 @@
+{
+  "context": {
+    "requested_answer_language": [
+      "japanese",
+      "english"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R02",
+        "R01"
+      ],
+      "when": {
+        "requested_answer_language": "japanese"
+      },
+      "unless": [],
+      "action": "include_glossary_link",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R03",
+        "R01"
+      ],
+      "when": {
+        "requested_answer_language": "english"
+      },
+      "unless": [],
+      "action": "include_glossary_link",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": []
+}

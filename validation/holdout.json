@@ -1,0 +1,8 @@
+{
+  "venue_fee_values":{"document":"venue_desk","situation":"同じ利用時間の二つの方法を比べてほしい。現時点の案内資料にはA方式1500円、B方式2000円と別々に記載され、差額そのものの記載はない。"},
+  "venue_fee_missing":{"document":"venue_desk","situation":"同じ時間の会場AとBの費用差を聞かれた。Aは1500円、Bは料金表に記載がなく、利用区分も分からない。金額差は資料から算出できない。"},
+  "venue_fee_explicit":{"document":"venue_desk","situation":"同じ時間の二方式を比較してほしい。現時点の公式資料にはA方式1500円、B方式2000円、B方式はA方式より500円高いとすべて記載されている。"},
+  "venue_display":{"document":"venue_desk","situation":"利用者は現場の表示を見つけたい。施設案内の正式名称に利用者が知らない設備用語がある。用語を簡単に説明した上で、表示名も知りたい。"},
+  "venue_access":{"document":"venue_desk","situation":"二つの入口から同じホールへ移動できると受領資料にある。歩く時間は資料になく、利用者がどの設備を使うかは伝えられていない。両方の入口を案内できるか尋ねられた。"},
+  "venue_hours":{"document":"venue_desk","situation":"来月21日の予約受付時間を聞かれた。その日は一斉点検で来館できないが、予約担当の告知には電話の予約受付が13時から17時と記載されている。"}
+}

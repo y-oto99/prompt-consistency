@@ -1,0 +1,33 @@
+{
+  "context": {},
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R02"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "recommend_email_support",
+      "effect": "forbid"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R03"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "recommend_phone_support",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": [
+    {
+      "sources": [
+        "R01"
+      ],
+      "reason": "メール受付と電話受付の少なくとも一方を案内するという、複数の行動の選択を指定している"
+    }
+  ]
+}

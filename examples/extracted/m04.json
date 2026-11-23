@@ -1,0 +1,155 @@
+{
+  "context": {
+    "asks_delivery_status": [
+      "yes",
+      "no"
+    ],
+    "order_shipped": [
+      "yes",
+      "no"
+    ],
+    "requests_return_instructions": [
+      "yes",
+      "no"
+    ],
+    "input_explicitly_requests_human_handoff": [
+      "yes",
+      "no"
+    ],
+    "order_number_confirmed": [
+      "yes",
+      "no"
+    ],
+    "asks_about_delivery_delay": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "asks_delivery_status": "yes",
+        "order_shipped": "yes"
+      },
+      "unless": [],
+      "action": "include_tracking_page_link",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R02"
+      ],
+      "when": {
+        "requests_return_instructions": "yes"
+      },
+      "unless": [],
+      "action": "include_return_form_link",
+      "effect": "require"
+    },
+    {
+      "id": "q3",
+      "sources": [
+        "R03"
+      ],
+      "when": {
+        "input_explicitly_requests_human_handoff": "yes"
+      },
+      "unless": [],
+      "action": "state_support_hours",
+      "effect": "require"
+    },
+    {
+      "id": "q4",
+      "sources": [
+        "R04"
+      ],
+      "when": {
+        "order_number_confirmed": "yes"
+      },
+      "unless": [],
+      "action": "ask_for_order_number",
+      "effect": "forbid"
+    },
+    {
+      "id": "q5",
+      "sources": [
+        "R05"
+      ],
+      "when": {
+        "asks_about_delivery_delay": "yes"
+      },
+      "unless": [],
+      "action": "explain_how_to_check_next",
+      "effect": "require"
+    },
+    {
+      "id": "q6",
+      "sources": [
+        "R06"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "quote_past_inquiry_history",
+      "effect": "forbid"
+    },
+    {
+      "id": "q7",
+      "sources": [
+        "R07"
+      ],
+      "when": {
+        "asks_delivery_status": "yes"
+      },
+      "unless": [],
+      "action": "include_order_number",
+      "effect": "require"
+    },
+    {
+      "id": "q8",
+      "sources": [
+        "R08"
+      ],
+      "when": {
+        "requests_return_instructions": "yes"
+      },
+      "unless": [],
+      "action": "state_product_photo_submission_is_required",
+      "effect": "forbid"
+    },
+    {
+      "id": "q9",
+      "sources": [
+        "R09"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "include_staff_name",
+      "effect": "forbid"
+    },
+    {
+      "id": "q10",
+      "sources": [
+        "R10"
+      ],
+      "when": {
+        "requests_return_instructions": "yes"
+      },
+      "unless": [],
+      "action": "guarantee_refund_date",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": [
+    {
+      "sources": [
+        "R11"
+      ],
+      "reason": "「お客さまが負担に感じない情報量」の判定基準が定義されていない"
+    }
+  ]
+}

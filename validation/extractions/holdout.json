@@ -1,0 +1,84 @@
+{
+  "venue_access": [
+    {
+      "note": "二つの入口は資料上どちらも同じホールへの通路として案内できる。両方が質問の対象であり、当日の開放状況は確認先を添える。移動時間や本人が使える設備、必要な補助は資料と申告からは分からない。",
+      "constraints": [
+        {"line": "R004", "any_of": [{"action": "lead_with_answer", "effect": "do"}]},
+        {"line": "R005", "any_of": [{"action": "explain_both_entrances_to_hall", "effect": "do"}]},
+        {"line": "R005", "any_of": [{"action": "guess_walking_time", "effect": "omit"}]},
+        {"line": "R012", "any_of": [{"action": "explain_both_entrances_to_hall", "effect": "do"}]},
+        {"line": "R012", "any_of": [{"action": "identify_contact_for_entrance_opening", "effect": "do"}]},
+        {"line": "R012", "any_of": [{"action": "guess_equipment_user_can_use", "effect": "omit"}]},
+        {"line": "R012", "any_of": [{"action": "guess_assistance_user_needs", "effect": "omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "venue_display": [
+    {
+      "note": "利用者は設備の意味と現場の表示名を求めている。R010は日常語に言い換える場所を説明本文、施設案内の正式名称を載せる場所を引用欄として指定している。",
+      "constraints": [
+        {"line": "R004", "any_of": [{"action": "lead_with_answer", "effect": "do"}]},
+        {"line": "R010", "any_of": [{"action": "explain_equipment_in_plain_language", "effect": "do"}]},
+        {"line": "R010", "any_of": [{"action": "quote_official_equipment_name", "effect": "do"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "venue_fee_explicit": [
+    {
+      "note": "同じ利用時間で、両方式の料金と差額そのものが現時点の資料にある。R015の対象に差額を含める読みでも、差額を提示できる。",
+      "constraints": [
+        {"line": "R004", "any_of": [{"action": "lead_with_answer", "effect": "do"}]},
+        {"line": "R014", "any_of": [{"action": "state_numeric_fee_difference", "effect": "do"}]},
+        {"line": "R015", "any_of": [{"action": "state_unsupported_fee_amount", "effect": "omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "venue_fee_missing": [
+    {
+      "note": "同じ利用時間なのでR014の時間調整は適用されない。Bの料金も利用区分も不明で、差額は掲載された料金から算出できない。R015を資料に基づく計算まで認める読みでも、ここで数値の差額を出すには不明の料金を補う必要がある。",
+      "constraints": [
+        {"line": "R004", "any_of": [{"action": "lead_with_answer", "effect": "do"}]},
+        {"line": "R014", "any_of": [{"action": "state_numeric_fee_difference", "effect": "do"}]},
+        {"line": "R015", "any_of": [{"action": "state_numeric_fee_difference", "effect": "omit"}]},
+        {"line": "R015", "any_of": [{"action": "state_unsupported_fee_amount", "effect": "omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "venue_fee_values": [
+    {
+      "note": "R015の『料金の案内に使う金額』に差額を含める読み。利用時間は同じで両方式の料金が載っているが、算出した差額自体は資料に記載がない。",
+      "constraints": [
+        {"line": "R004", "any_of": [{"action": "lead_with_answer", "effect": "do"}]},
+        {"line": "R014", "any_of": [{"action": "state_numeric_fee_difference", "effect": "do"}]},
+        {"line": "R015", "any_of": [{"action": "state_numeric_fee_difference", "effect": "omit"}]},
+        {"line": "R015", "any_of": [{"action": "state_unsupported_fee_amount", "effect": "omit"}]}
+      ],
+      "relevant_gap": null
+    },
+    {
+      "note": "R015の金額を比較の元になる料金と読む。両方式の料金は現行資料にあり、同じ時間での差額は料金を見込まずにその二額から計算できる。",
+      "constraints": [
+        {"line": "R004", "any_of": [{"action": "lead_with_answer", "effect": "do"}]},
+        {"line": "R014", "any_of": [{"action": "state_numeric_fee_difference", "effect": "do"}]},
+        {"line": "R015", "any_of": [{"action": "state_unsupported_fee_amount", "effect": "omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "venue_hours": [
+    {
+      "note": "来月21日は点検で来館できない。電話の予約受付時間はその日の担当告知に明記されている。問いの対象は特定日の予約受付であり、催事の実施日や会場利用日の確認を求める事情は示されていない。",
+      "constraints": [
+        {"line": "R004", "any_of": [{"action": "lead_with_answer", "effect": "do"}]},
+        {"line": "R007", "any_of": [{"action": "distinguish_admission_from_phone_booking", "effect": "do"}]},
+        {"line": "R007", "any_of": [{"action": "use_posted_phone_booking_hours", "effect": "do"}]},
+        {"line": "R007", "any_of": [{"action": "infer_booking_hours_from_usual_hours", "effect": "omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ]
+}

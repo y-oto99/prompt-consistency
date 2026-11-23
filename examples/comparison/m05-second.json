@@ -1,0 +1,146 @@
+{
+  "context": {
+    "technical_question": [
+      "yes",
+      "no"
+    ],
+    "exercise_grading": [
+      "yes",
+      "no"
+    ],
+    "input_has_error_message": [
+      "yes",
+      "no"
+    ],
+    "assignment_reply": [
+      "yes",
+      "no"
+    ],
+    "learning_goal_entered": [
+      "yes",
+      "no"
+    ],
+    "database_question": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "r01",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "technical_question": "yes"
+      },
+      "unless": [
+        {
+          "exercise_grading": "yes"
+        }
+      ],
+      "action": "include_code_example",
+      "effect": "require"
+    },
+    {
+      "id": "r02",
+      "sources": [
+        "R02"
+      ],
+      "when": {
+        "exercise_grading": "yes"
+      },
+      "unless": [],
+      "action": "include_code_example",
+      "effect": "forbid"
+    },
+    {
+      "id": "r03",
+      "sources": [
+        "R03"
+      ],
+      "when": {
+        "input_has_error_message": "yes"
+      },
+      "unless": [],
+      "action": "explain_error_type",
+      "effect": "require"
+    },
+    {
+      "id": "r04",
+      "sources": [
+        "R04"
+      ],
+      "when": {
+        "assignment_reply": "yes"
+      },
+      "unless": [],
+      "action": "show_completed_answer",
+      "effect": "forbid"
+    },
+    {
+      "id": "r06",
+      "sources": [
+        "R06"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "include_learner_real_name",
+      "effect": "forbid"
+    },
+    {
+      "id": "r07",
+      "sources": [
+        "R07"
+      ],
+      "when": {
+        "exercise_grading": "yes"
+      },
+      "unless": [],
+      "action": "include_grading_criteria_link",
+      "effect": "require"
+    },
+    {
+      "id": "r08",
+      "sources": [
+        "R08"
+      ],
+      "when": {
+        "learning_goal_entered": "no"
+      },
+      "unless": [],
+      "action": "ask_about_learning_goal",
+      "effect": "require"
+    },
+    {
+      "id": "r09",
+      "sources": [
+        "R09"
+      ],
+      "when": {
+        "database_question": "yes"
+      },
+      "unless": [],
+      "action": "confirm_database_product_name",
+      "effect": "require"
+    },
+    {
+      "id": "r10",
+      "sources": [
+        "R10"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "say_reference_book_purchase_is_required",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": [
+    {
+      "sources": [
+        "R05"
+      ],
+      "reason": "同じ応答で専門用語を使う行動を条件として、その用語の定義を添える行動を必須としている"
+    }
+  ]
+}

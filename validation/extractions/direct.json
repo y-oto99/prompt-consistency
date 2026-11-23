@@ -1,0 +1,74 @@
+{
+  "commerce_condition": {
+    "status": "compatible",
+    "reason": "条件が不明なら個別の可否を断定しないという但し書きがあり、未開封の場合に限るという条件付きの結論を冒頭に置ける。"
+  },
+  "commerce_general": {
+    "status": "compatible",
+    "reason": "質問は営業時間のみなので追跡リンクの指定は発動せず、本人確認前でも公式の一般案内を使える。"
+  },
+  "commerce_tracking": {
+    "status": "conflict",
+    "reason": "照会画面にある注文固有の追跡リンクを冒頭に載せる義務と、本人確認前に注文情報を載せない義務が重なる。一般案内への切替条件も成立しない。"
+  },
+  "editorial_public": {
+    "status": "conflict",
+    "reason": "唯一の該当文を原文のまま載せると、引用欄も含めて掲載禁止の未公開製品コードが出る。"
+  },
+  "editorial_quotation": {
+    "status": "compatible",
+    "reason": "原文は引用欄で保持し、別段落の説明本文で用語を平易にできる。外部向けFAQの掲載制限は適用されない。"
+  },
+  "editorial_short": {
+    "status": "compatible",
+    "reason": "字数上限がなく、締切の直後に例外を残したまま資料を短くできる。"
+  },
+  "quotation_full": {
+    "status": "conflict",
+    "reason": "唯一の該当文を一字一句引用すると、回答全体で禁止されている未知の専門用語が必ず入る。"
+  },
+  "quotation_section": {
+    "status": "conflict",
+    "reason": "原文どおりの一文には未知の専門用語が含まれ、引用も回答全体にかかる禁止の範囲に入る。"
+  },
+  "quotation_short": {
+    "status": "conflict",
+    "reason": "未知の専門用語を含む唯一の原文をそのまま引用する義務と、回答全体でその用語を使わない義務を同時に満たせない。"
+  },
+  "reference_cause": {
+    "status": "interpretation_dependent",
+    "reason": "実際の原因を明らかにする義務と読むと根拠が足りない。対象窓口の変更と原因を判断できない理由まで説明すれば足りる読みでは両立する。"
+  },
+  "reference_examples": {
+    "status": "interpretation_dependent",
+    "reason": "資料限定を例示にも適用すると載せられる具体例がない。定義に沿った仮の例を実測の主張と区別して扱う読みでは両立する。"
+  },
+  "reference_quotation": {
+    "status": "compatible",
+    "reason": "部門固有の用語は原文引用で保持し、直後の説明文だけ日常語に置き換えられる。"
+  },
+  "research_full": {
+    "status": "interpretation_dependent",
+    "reason": "実際の原因を述べる義務と読むと資料不足で両立しない。観測事実と原因を特定できない理由の説明まで認めるなら両立する。"
+  },
+  "research_section": {
+    "status": "interpretation_dependent",
+    "reason": "原因自体の説明が必須なら裏付けがない。構成の変化を併記して因果が不明な理由を説明する読みなら両立する。"
+  },
+  "research_short": {
+    "status": "interpretation_dependent",
+    "reason": "『なぜ』に原因を示して答えるなら根拠不足となる。原因を判断できない事情の説明も含む読みなら両立する。"
+  },
+  "returns_full": {
+    "status": "interpretation_dependent",
+    "reason": "結論を確定した可否と読むと、開封状態が不明なため断定禁止に触れる。条件付きの結論も含む読みなら両立する。"
+  },
+  "returns_section": {
+    "status": "interpretation_dependent",
+    "reason": "冒頭に個別の可否を確定する読みでは衝突する。未開封の条件を示した一文も結論に当たる読みなら両立する。"
+  },
+  "returns_short": {
+    "status": "interpretation_dependent",
+    "reason": "結論が確定した可否を指すなら断定禁止に触れる。未開封を条件とする結論で足りるなら両立する。"
+  }
+}

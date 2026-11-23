@@ -1,0 +1,45 @@
+{
+  "context": {},
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R01"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "approve",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R01"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "send",
+      "effect": "require"
+    }
+  ],
+  "unmodeled": [
+    {
+      "sources": [
+        "R01"
+      ],
+      "reason": "承認と送信の実行回数をそれぞれ1回と指定している"
+    },
+    {
+      "sources": [
+        "R01"
+      ],
+      "reason": "送信を承認の後に実施するという、時間を使う順序を指定している"
+    },
+    {
+      "sources": [
+        "R02"
+      ],
+      "reason": "送信を承認の前に実施するという、時間を使う順序を指定している"
+    }
+  ]
+}

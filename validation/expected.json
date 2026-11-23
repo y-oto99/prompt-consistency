@@ -1,0 +1,20 @@
+{
+  "research_short":"interpretation_dependent",
+  "research_section":"interpretation_dependent",
+  "research_full":"interpretation_dependent",
+  "returns_short":"interpretation_dependent",
+  "returns_section":"interpretation_dependent",
+  "returns_full":"interpretation_dependent",
+  "quotation_short":"conflict",
+  "quotation_section":"conflict",
+  "quotation_full":"conflict",
+  "reference_examples":"interpretation_dependent",
+  "reference_cause":"interpretation_dependent",
+  "reference_quotation":"compatible",
+  "commerce_condition":"compatible",
+  "commerce_tracking":"interpretation_dependent",
+  "commerce_general":"compatible",
+  "editorial_quotation":"compatible",
+  "editorial_public":"conflict",
+  "editorial_short":"compatible"
+}

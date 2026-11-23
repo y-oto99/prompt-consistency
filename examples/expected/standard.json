@@ -1,0 +1,79 @@
+{
+  "m01": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "m02": {
+    "pairs": [
+      [
+        "R02",
+        "R11"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "m03": {
+    "pairs": [
+      [
+        "R07",
+        "R11"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "m04": {
+    "pairs": [],
+    "unmodeled": [
+      "R11"
+    ]
+  },
+  "m05": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "m06": {
+    "pairs": [
+      [
+        "R07",
+        "R11"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "m07": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "m08": {
+    "pairs": [
+      [
+        "R01",
+        "R11"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "m09": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "m10": {
+    "pairs": [
+      [
+        "R07",
+        "R11"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "m11": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "m12": {
+    "pairs": [],
+    "unmodeled": [
+      "R11"
+    ]
+  }
+}

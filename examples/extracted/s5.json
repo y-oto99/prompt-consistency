@@ -1,0 +1,35 @@
+{
+  "context": {
+    "summary_requested": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "summary_requested": "yes"
+      },
+      "unless": [],
+      "action": "include_source_text_link",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R02"
+      ],
+      "when": {
+        "summary_requested": "yes"
+      },
+      "unless": [],
+      "action": "include_source_text_link",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": []
+}

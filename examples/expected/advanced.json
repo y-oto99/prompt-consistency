@@ -1,0 +1,45 @@
+{
+  "a1": {
+    "pairs": [
+      [
+        "R01",
+        "R11"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "a2": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "a3": {
+    "pairs": [
+      [
+        "R01",
+        "R11"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "a4": {
+    "pairs": [],
+    "unmodeled": [
+      "R01"
+    ]
+  },
+  "a5": {
+    "pairs": [],
+    "unmodeled": [
+      "R01",
+      "R02",
+      "R03"
+    ]
+  },
+  "a6": {
+    "pairs": [],
+    "unmodeled": [
+      "R01",
+      "R02"
+    ]
+  }
+}

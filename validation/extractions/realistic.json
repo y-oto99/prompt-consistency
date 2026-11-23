@@ -1,0 +1,155 @@
+{
+  "reference_cause": [
+    {
+      "note": "改善理由への説明は、確認できた解決率の変化と集計対象の違いを示し、原因までは分からないと伝える形を含む。",
+      "constraints": [
+        {"line":"R004","any_of":[{"action":"start_with_direct_brief_answer","effect":"do"}]},
+        {"line":"R005","any_of":[{"action":"check_comparability_before_comparing","effect":"do"}]},
+        {"line":"R006","any_of":[{"action":"explain_observations_and_causal_uncertainty","effect":"do"}]},
+        {"line":"R015","any_of":[{"action":"state_unsupported_facts","effect":"omit"}]},
+        {"line":"R015","any_of":[{"action":"assert_unverified_cause","effect":"omit"}]},
+        {"line":"R025","any_of":[{"action":"report_confirmed_rates","effect":"do"}]},
+        {"line":"R029","any_of":[{"action":"note_scope_change_early","effect":"do"}]}
+      ],
+      "relevant_gap": null
+    },
+    {
+      "note": "改善理由への説明には、解決率が変わった実際の原因の特定まで必要だと読む。原因を検証した分析はない。",
+      "constraints": [
+        {"line":"R004","any_of":[{"action":"start_with_direct_brief_answer","effect":"do"}]},
+        {"line":"R005","any_of":[{"action":"check_comparability_before_comparing","effect":"do"}]},
+        {"line":"R006","any_of":[{"action":"assert_unverified_cause","effect":"do"}]},
+        {"line":"R015","any_of":[{"action":"state_unsupported_facts","effect":"omit"}]},
+        {"line":"R015","any_of":[{"action":"assert_unverified_cause","effect":"omit"}]},
+        {"line":"R025","any_of":[{"action":"report_confirmed_rates","effect":"do"}]},
+        {"line":"R029","any_of":[{"action":"note_scope_change_early","effect":"do"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "reference_examples": [
+    {
+      "note": "資料の定義から組み立てた仮定の例を一つ、仮定と明示して添えられる。例自体の出典を付ける条件は成立しない。",
+      "constraints": [
+        {"line":"R004","any_of":[{"action":"start_with_direct_brief_answer","effect":"do"}]},
+        {"line":"R010","any_of":[{"action":"give_one_hypothetical_definition_example","effect":"do"}]},
+        {"line":"R015","any_of":[{"action":"state_unsupported_facts","effect":"omit"}]},
+        {"line":"R020","any_of":[{"action":"use_plain_language_for_department_terms_in_explanation","effect":"do"}]}
+      ],
+      "relevant_gap": null
+    },
+    {
+      "note": "裏付けの範囲を例にも適用し、資料外の具体例は仮定と明示しても扱えないと読む。資料には定義しかないため、具体例の候補は定義に基づく仮定例になる。",
+      "constraints": [
+        {"line":"R004","any_of":[{"action":"start_with_direct_brief_answer","effect":"do"}]},
+        {"line":"R010","any_of":[{"action":"give_one_hypothetical_definition_example","effect":"do"}]},
+        {"line":"R015","any_of":[{"action":"state_unsupported_facts","effect":"omit"}]},
+        {"line":"R015","any_of":[{"action":"give_one_hypothetical_definition_example","effect":"omit"}]},
+        {"line":"R020","any_of":[{"action":"use_plain_language_for_department_terms_in_explanation","effect":"do"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "reference_quotation": [
+    {
+      "note": "部門用語を含む原文一文は引用符内に残す。直後の別文に日常語による説明を置く。",
+      "constraints": [
+        {"line":"R004","any_of":[{"action":"start_with_direct_brief_answer","effect":"do"}]},
+        {"line":"R015","any_of":[{"action":"state_unsupported_facts","effect":"omit"}]},
+        {"line":"R020","any_of":[{"action":"quote_one_verbatim_sentence","effect":"do"}]},
+        {"line":"R020","any_of":[{"action":"enclose_verbatim_sentence_in_quotation_marks","effect":"do"}]},
+        {"line":"R020","any_of":[{"action":"paraphrase_in_separate_sentence_immediately_after_quote","effect":"do"}]},
+        {"line":"R020","any_of":[{"action":"use_plain_language_for_department_terms_in_explanation","effect":"do"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "commerce_condition": [
+    {
+      "note": "初文では未開封の場合に限り返品できると条件つきで答える。開封状態の質問は許され、質問する場合は理由も説明する。",
+      "constraints": [
+        {"line":"R003","any_of":[{"action":"set_unsupported_return_terms","effect":"omit"}]},
+        {"line":"R004","any_of":[{"action":"start_with_conditional_return_answer","effect":"do"}]},
+        {"line":"R004","any_of":[{"action":"assert_order_return_eligibility_without_opening_status","effect":"omit"}]},
+        {"line":"R022","any_of":[{"action":"ask_for_opening_status","effect":"omit"},{"action":"explain_why_opening_status_matters","effect":"do"}]},
+        {"line":"R022","any_of":[{"action":"ask_again_for_known_order_facts","effect":"omit"}]},
+        {"line":"R023","any_of":[{"action":"end_with_one_sentence_naming_next_actor_and_action","effect":"do"}]},
+        {"line":"R023","any_of":[{"action":"indicate_opening_status_needs_confirmation","effect":"do"},{"action":"give_official_contact","effect":"do"}]},
+        {"line":"R023","any_of":[{"action":"claim_unverified_handoff","effect":"omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "commerce_general": [
+    {
+      "note": "営業時間だけの問い合わせなので公式の一般案内を根拠に答えられる。当該注文の追跡を求められた場合の初出リンクの指定は適用されない。",
+      "constraints": [
+        {"line":"R014","any_of":[{"action":"disclose_order_information","effect":"omit"}]},
+        {"line":"R018","any_of":[{"action":"use_official_information_for_service_hours","effect":"do"}]},
+        {"line":"R023","any_of":[{"action":"end_with_one_sentence_naming_next_actor_and_action","effect":"do"}]},
+        {"line":"R023","any_of":[{"action":"claim_unverified_handoff","effect":"omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "commerce_tracking": [
+    {
+      "note": "画面にある当該注文の個別リンクが追跡案内に指定される。リンクは特定の注文に紐付くため本人確認前の注文情報に当たる。一般ページは案内可能だが、個別リンクが画面にない場合の代替条件は成立しない。",
+      "constraints": [
+        {"line":"R013","any_of":[{"action":"include_order_specific_tracking_link","effect":"do"}]},
+        {"line":"R013","any_of":[{"action":"place_order_specific_tracking_link_first","effect":"do"}]},
+        {"line":"R014","any_of":[{"action":"include_order_specific_tracking_link","effect":"omit"}]},
+        {"line":"R014","any_of":[{"action":"disclose_order_information","effect":"omit"}]},
+        {"line":"R014","any_of":[{"action":"use_order_screen_or_carrier_receipt_for_order_claims","effect":"do"}]},
+        {"line":"R023","any_of":[{"action":"end_with_one_sentence_naming_next_actor_and_action","effect":"do"}]},
+        {"line":"R023","any_of":[{"action":"indicate_identity_verification_needed","effect":"do"},{"action":"give_official_contact","effect":"do"}]},
+        {"line":"R023","any_of":[{"action":"claim_unverified_handoff","effect":"omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "editorial_public": [
+    {
+      "note": "唯一の原文一文を原文どおり引用すると未公開コードが入る。公開FAQの禁止範囲は引用欄にも及ぶ。",
+      "constraints": [
+        {"line":"R003","any_of":[{"action":"claim_unverified_publication_or_approval","effect":"omit"}]},
+        {"line":"R004","any_of":[{"action":"use_inaccessible_internal_url_as_substitute","effect":"omit"}]},
+        {"line":"R005","any_of":[{"action":"place_conclusion_and_next_action_in_first_half","effect":"do"}]},
+        {"line":"R012","any_of":[{"action":"quote_one_verbatim_sentence","effect":"do"}]},
+        {"line":"R012","any_of":[{"action":"include_unreleased_product_code","effect":"do"}]},
+        {"line":"R012","any_of":[{"action":"separate_quote_and_explanation_into_paragraphs","effect":"do"}]},
+        {"line":"R013","any_of":[{"action":"guess_missing_information","effect":"omit"}]},
+        {"line":"R016","any_of":[{"action":"use_reader_search_language_in_faq","effect":"do"}]},
+        {"line":"R016","any_of":[{"action":"include_unreleased_product_code","effect":"omit"}]}
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "editorial_quotation": [
+    {
+      "note": "社内向けなので原文の「暫定閲覧資格」を引用欄に保持できる。説明本文は別段落とし、読者が初めて接する用語を使う場合はそこを平易にする。",
+      "constraints": [
+        {"line":"R003","any_of":[{"action":"claim_unverified_publication_or_approval","effect":"omit"}]},
+        {"line":"R005","any_of":[{"action":"place_conclusion_and_next_action_in_first_half","effect":"do"}]},
+        {"line":"R012","any_of":[{"action":"quote_one_verbatim_sentence","effect":"do"}]},
+        {"line":"R012","any_of":[{"action":"separate_quote_and_explanation_into_paragraphs","effect":"do"}]},
+        {"line":"R013","any_of":[{"action":"guess_missing_information","effect":"omit"}]}
+      ],
+      "relevant_gap": "読者が用語を初めて見るかは入力から確定できない。平易な表現への置き換えが適用される範囲は説明本文に限られる。"
+    }
+  ],
+  "editorial_short": [
+    {
+      "note": "参加者向け資料を短く整え、特定担当の締切例外は該当文の直後に残す。要点は冒頭の短い段落に置く。",
+      "constraints": [
+        {"line":"R003","any_of":[{"action":"claim_unverified_publication_or_approval","effect":"omit"}]},
+        {"line":"R005","any_of":[{"action":"place_conclusion_and_next_action_in_first_half","effect":"do"}]},
+        {"line":"R013","any_of":[{"action":"guess_missing_information","effect":"omit"}]},
+        {"line":"R017","any_of":[{"action":"put_key_points_in_brief_opening_paragraph","effect":"do"}]},
+        {"line":"R017","any_of":[{"action":"retain_deadline_exception","effect":"do"}]},
+        {"line":"R017","any_of":[{"action":"place_deadline_exception_immediately_after_deadline","effect":"do"}]}
+      ],
+      "relevant_gap": "具体的な字数上限は与えられておらず、短くする程度の判定は定量化できない。"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "context": {
+    "is_technical_question": [
+      "yes",
+      "no"
+    ],
+    "grading_exercise": [
+      "yes",
+      "no"
+    ],
+    "input_has_error_message": [
+      "yes",
+      "no"
+    ],
+    "asks_about_assignment": [
+      "yes",
+      "no"
+    ],
+    "question_contains_technical_terms": [
+      "yes",
+      "no"
+    ],
+    "learning_goal_provided": [
+      "yes",
+      "no"
+    ],
+    "asks_about_database": [
+      "yes",
+      "no"
+    ],
+    "learner_is_beginner": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "is_technical_question": "yes"
+      },
+      "unless": [
+        {
+          "grading_exercise": "yes"
+        }
+      ],
+      "action": "include_code_example",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R02"
+      ],
+      "when": {
+        "grading_exercise": "yes"
+      },
+      "unless": [],
+      "action": "include_code_example",
+      "effect": "forbid"
+    },
+    {
+      "id": "q3",
+      "sources": [
+        "R03"
+      ],
+      "when": {
+        "input_has_error_message": "yes"
+      },
+      "unless": [],
+      "action": "explain_error_type",
+      "effect": "require"
+    },
+    {
+      "id": "q4",
+      "sources": [
+        "R04"
+      ],
+      "when": {
+        "asks_about_assignment": "yes"
+      },
+      "unless": [],
+      "action": "provide_completed_answer",
+      "effect": "forbid"
+    },
+    {
+      "id": "q5",
+      "sources": [
+        "R05"
+      ],
+      "when": {
+        "question_contains_technical_terms": "yes"
+      },
+      "unless": [],
+      "action": "define_technical_terms_in_question",
+      "effect": "require"
+    },
+    {
+      "id": "q6",
+      "sources": [
+        "R06"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "include_learners_real_name",
+      "effect": "forbid"
+    },
+    {
+      "id": "q7",
+      "sources": [
+        "R07"
+      ],
+      "when": {
+        "grading_exercise": "yes"
+      },
+      "unless": [],
+      "action": "include_grading_criteria_link",
+      "effect": "require"
+    },
+    {
+      "id": "q8",
+      "sources": [
+        "R08"
+      ],
+      "when": {
+        "learning_goal_provided": "no"
+      },
+      "unless": [],
+      "action": "ask_about_learning_goal",
+      "effect": "require"
+    },
+    {
+      "id": "q9",
+      "sources": [
+        "R09"
+      ],
+      "when": {
+        "asks_about_database": "yes"
+      },
+      "unless": [],
+      "action": "confirm_database_product_name",
+      "effect": "require"
+    },
+    {
+      "id": "q10",
+      "sources": [
+        "R10"
+      ],
+      "when": {},
+      "unless": [],
+      "action": "state_reference_book_purchase_is_required",
+      "effect": "forbid"
+    },
+    {
+      "id": "q11",
+      "sources": [
+        "R11"
+      ],
+      "when": {
+        "learner_is_beginner": "yes"
+      },
+      "unless": [],
+      "action": "include_code_example",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": []
+}

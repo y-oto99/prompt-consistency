@@ -1,0 +1,26 @@
+{
+  "a4": {
+    "domains": {"email": [false, true], "phone": [false, true]},
+    "constraints": [
+      {"id": "R01", "expression": ["or", "email", "phone"]},
+      {"id": "R02", "expression": ["not", "email"]},
+      {"id": "R03", "expression": ["not", "phone"]}
+    ]
+  },
+  "a5": {
+    "domains": {"example_count": {"min": 0, "max": 4}, "min_example_chars": {"min": 0, "max": 100}, "total_chars": {"min": 0, "max": 320}},
+    "constraints": [
+      {"id": "R01", "expression": ["ge", "example_count", 3]},
+      {"id": "R02", "expression": ["ge", "min_example_chars", 100]},
+      {"id": "R03", "expression": ["le", "total_chars", 200]},
+      {"id": "assumption_disjoint_examples", "expression": ["ge", "total_chars", ["mul", "example_count", "min_example_chars"]]}
+    ]
+  },
+  "a6": {
+    "domains": {"approve_position": {"min": 1, "max": 2}, "send_position": {"min": 1, "max": 2}},
+    "constraints": [
+      {"id": "R01", "expression": ["lt", "approve_position", "send_position"]},
+      {"id": "R02", "expression": ["lt", "send_position", "approve_position"]}
+    ]
+  }
+}

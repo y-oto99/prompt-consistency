@@ -1,0 +1,44 @@
+{
+  "context": {
+    "assignment_question": [
+      "yes",
+      "no"
+    ],
+    "assignment_submitted": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "assignment_question": "yes"
+      },
+      "unless": [
+        {
+          "assignment_submitted": "yes"
+        }
+      ],
+      "action": "include_next_hint",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R02"
+      ],
+      "when": {
+        "assignment_question": "yes",
+        "assignment_submitted": "yes"
+      },
+      "unless": [],
+      "action": "include_next_hint",
+      "effect": "forbid"
+    }
+  ],
+  "unmodeled": []
+}

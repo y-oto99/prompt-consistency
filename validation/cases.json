@@ -1,0 +1,20 @@
+{
+  "research_short":{"family":"research","scale":"short","situation":"質問は「なぜ改修後に解決率が上がったの？」。資料は「改修後、解決率は60%から66%に上昇。同時に問い合わせの構成が変化した」のみ。原因を示す調査結果はない。"},
+  "research_section":{"family":"research","scale":"section","situation":"質問は「なぜ改修後に解決率が上がったの？」。資料は「改修後、解決率は60%から66%に上昇。同時に問い合わせの構成が変化した」のみ。原因を示す調査結果はない。"},
+  "research_full":{"family":"research","scale":"full","situation":"質問は「なぜ改修後に解決率が上がったの？」。資料は「改修後、解決率は60%から66%に上昇。同時に問い合わせの構成が変化した」のみ。原因を示す調査結果はない。"},
+  "returns_short":{"family":"returns","scale":"short","situation":"「注文した雑貨は返品できますか？」と聞かれた。規約には未開封の場合に限り返品可能とあり、開封済みかは不明。他の条件は充足。"},
+  "returns_section":{"family":"returns","scale":"section","situation":"「注文した雑貨は返品できますか？」と聞かれた。規約には未開封の場合に限り返品可能とあり、開封済みかは不明。他の条件は充足。"},
+  "returns_full":{"family":"returns","scale":"full","situation":"「注文した雑貨は返品できますか？」と聞かれた。規約には未開封の場合に限り返品可能とあり、開封済みかは不明。他の条件は充足。"},
+  "quotation_short":{"family":"quotation","scale":"short","situation":"利用者は規約の正確な文言を聞いている。該当文は一文だけで、読者に未知の専門用語を含む。「申請の審査には先使用権の確認を要する。」"},
+  "quotation_section":{"family":"quotation","scale":"section","situation":"利用者は規約の正確な文言を聞いている。該当文は一文だけで、読者に未知の専門用語を含む。「申請の審査には先使用権の確認を要する。」"},
+  "quotation_full":{"family":"quotation","scale":"full","situation":"利用者は規約の正確な文言を聞いている。該当文は一文だけで、読者に未知の専門用語を含む。「申請の審査には先使用権の確認を要する。」"},
+  "reference_examples":{"document":"analysis_desk","situation":"指標「一次回答率」を初めて聞く利用者に意味を説明する。資料には定義だけがあり、例や実測事例は含まれない。"},
+  "reference_cause":{"document":"analysis_desk","situation":"改善理由を尋ねられた。資料には改修後に解決率が60%から66%となったことと別の窓口が対象に加わったことが記録されている。原因を検証した分析はない。"},
+  "reference_quotation":{"document":"analysis_desk","situation":"部門の規程が指標報告の対象をどう定義しているか、正確な文言を聞かれた。資料のその一文には部門固有の用語「再振分」がある。"},
+  "commerce_condition":{"document":"commerce_desk","situation":"「注文した雑貨は返品できますか？」。商品の開封状態はまだ不明で、未開封の場合に限り可。他の条件は満たしている。"},
+  "commerce_tracking":{"document":"commerce_desk","situation":"本人確認前に、当該注文の配送の進み具合を尋ねられた。注文照会画面には特定の注文に紐付く個別の追跡リンクがある。一般案内ページへのリンクもある。"},
+  "commerce_general":{"document":"commerce_desk","situation":"本人確認前に配送窓口の営業時間だけを聞かれた。公式の一般案内ページで営業時間は確認できる。当該注文の配送状況は尋ねられていない。"},
+  "editorial_quotation":{"document":"editorial_desk","situation":"社内手続きガイドの読者が規約の正確な文言を知りたい。該当の原文には用語「暫定閲覧資格」がある。外部公開用ではない。"},
+  "editorial_public":{"document":"editorial_desk","situation":"公開FAQの作成依頼で、規約の正確な文言を求められた。該当する唯一の一文には原文の一部として社内限定の未公開製品コードが含まれる。"},
+  "editorial_short":{"document":"editorial_desk","situation":"参加者向け一枚の資料を短くしてほしい。締切には特定の担当だけ別日になる例外がある。依頼は具体的な字数上限を指定していない。"}
+}

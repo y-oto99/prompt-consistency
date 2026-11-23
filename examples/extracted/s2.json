@@ -1,0 +1,35 @@
+{
+  "context": {
+    "delivery_status_question": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "delivery_status_question": "yes"
+      },
+      "unless": [],
+      "action": "include_tracking_page_link",
+      "effect": "require"
+    },
+    {
+      "id": "q2",
+      "sources": [
+        "R02"
+      ],
+      "when": {
+        "delivery_status_question": "yes"
+      },
+      "unless": [],
+      "action": "include_contact_link",
+      "effect": "require"
+    }
+  ],
+  "unmodeled": []
+}

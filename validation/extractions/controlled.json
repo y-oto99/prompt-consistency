@@ -1,0 +1,719 @@
+{
+  "research_full": [
+    {
+      "note": "「なぜ」を、解決率が上がった実際の原因を示す要求と読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "use_technical_jargon_in_explanation",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R024",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R024",
+          "any_of": [
+            {
+              "action": "state_unsubstantiated_information",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "note_unknown_overlap_at_end",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R022",
+          "any_of": [
+            {
+              "action": "create_attachments",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R022",
+          "any_of": [
+            {
+              "action": "answer_in_body",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R022",
+          "any_of": [
+            {
+              "action": "answer_in_prose",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": "同時に起きた変化は資料にあるが、上昇の原因を裏付ける調査結果はない。"
+    },
+    {
+      "note": "「なぜ」を、資料から原因をどこまで説明できるかを示す要求と読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "explain_why_cause_is_undetermined",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "use_technical_jargon_in_explanation",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R024",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R024",
+          "any_of": [
+            {
+              "action": "state_unsubstantiated_information",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "note_unknown_overlap_at_end",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R022",
+          "any_of": [
+            {
+              "action": "create_attachments",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R022",
+          "any_of": [
+            {
+              "action": "answer_in_body",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R022",
+          "any_of": [
+            {
+              "action": "answer_in_prose",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": "同時に起きた変化は資料にあるが、上昇の原因を裏付ける調査結果はない。"
+    }
+  ],
+  "research_section": [
+    {
+      "note": "「なぜ」を、解決率が上がった実際の原因を示す要求と読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "use_technical_jargon_in_explanation",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R009",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R009",
+          "any_of": [
+            {
+              "action": "state_unsubstantiated_information",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "note_unknown_overlap_at_end",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": "同時に起きた変化は資料にあるが、上昇の原因を裏付ける調査結果はない。"
+    },
+    {
+      "note": "「なぜ」を、資料から原因をどこまで説明できるかを示す要求と読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "explain_why_cause_is_undetermined",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "use_technical_jargon_in_explanation",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R009",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R009",
+          "any_of": [
+            {
+              "action": "state_unsubstantiated_information",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "note_unknown_overlap_at_end",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": "同時に起きた変化は資料にあるが、上昇の原因を裏付ける調査結果はない。"
+    }
+  ],
+  "research_short": [
+    {
+      "note": "「なぜ」を、解決率が上がった実際の原因を示す要求と読む。",
+      "constraints": [
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "use_technical_jargon_in_explanation",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_unsubstantiated_information",
+              "effect": "omit"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": "同時に起きた変化は資料にあるが、上昇の原因を裏付ける調査結果はない。"
+    },
+    {
+      "note": "「なぜ」を、資料から原因をどこまで説明できるかを示す要求と読む。",
+      "constraints": [
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "explain_why_cause_is_undetermined",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "use_technical_jargon_in_explanation",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_cause_of_increase",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_unsubstantiated_information",
+              "effect": "omit"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": "同時に起きた変化は資料にあるが、上昇の原因を裏付ける調査結果はない。"
+    }
+  ],
+  "returns_full": [
+    {
+      "note": "冒頭の「結論」は、返品できるかどうかの確定判断を指すと読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "give_conclusion_first_in_one_sentence",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R020",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "distinguish_established_and_unverified_facts",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    },
+    {
+      "note": "冒頭の「結論」は、未開封を条件とする案内や、現時点では判断できない旨も含むと読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "do"
+            },
+            {
+              "action": "state_conditional_return_eligibility",
+              "effect": "do"
+            },
+            {
+              "action": "state_return_eligibility_is_undetermined",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "give_conclusion_first_in_one_sentence",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R020",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "distinguish_established_and_unverified_facts",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "returns_section": [
+    {
+      "note": "冒頭の「結論」は、返品できるかどうかの確定判断を指すと読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "give_conclusion_first_in_one_sentence",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R007",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "distinguish_established_and_unverified_facts",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    },
+    {
+      "note": "冒頭の「結論」は、未開封を条件とする案内や、現時点では判断できない旨も含むと読む。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "do"
+            },
+            {
+              "action": "state_conditional_return_eligibility",
+              "effect": "do"
+            },
+            {
+              "action": "state_return_eligibility_is_undetermined",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "give_conclusion_first_in_one_sentence",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R007",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "distinguish_established_and_unverified_facts",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "returns_short": [
+    {
+      "note": "冒頭の「結論」は、返品できるかどうかの確定判断を指すと読む。",
+      "constraints": [
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "give_conclusion_first_in_one_sentence",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "omit"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    },
+    {
+      "note": "冒頭の「結論」は、未開封を条件とする案内や、現時点では判断できない旨も含むと読む。",
+      "constraints": [
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "do"
+            },
+            {
+              "action": "state_conditional_return_eligibility",
+              "effect": "do"
+            },
+            {
+              "action": "state_return_eligibility_is_undetermined",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "give_conclusion_first_in_one_sentence",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "state_definite_return_eligibility",
+              "effect": "omit"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "quotation_full": [
+    {
+      "note": "「回答全体」に引用も含まれる。該当する一文を原文どおり引用すると、利用者に未知の専門用語が入る。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "include_unknown_technical_term",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R018",
+          "any_of": [
+            {
+              "action": "quote_one_applicable_sentence_verbatim",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R018",
+          "any_of": [
+            {
+              "action": "include_unknown_technical_term",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "quotation_section": [
+    {
+      "note": "「回答全体」に引用も含まれる。該当する一文を原文どおり引用すると、利用者に未知の専門用語が入る。",
+      "constraints": [
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "include_unknown_technical_term",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "quote_one_applicable_sentence_verbatim",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R006",
+          "any_of": [
+            {
+              "action": "include_unknown_technical_term",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    }
+  ],
+  "quotation_short": [
+    {
+      "note": "「回答全体」に引用も含まれる。該当する一文を原文どおり引用すると、利用者に未知の専門用語が入る。",
+      "constraints": [
+        {
+          "line": "R001",
+          "any_of": [
+            {
+              "action": "include_unknown_technical_term",
+              "effect": "omit"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "quote_one_applicable_sentence_verbatim",
+              "effect": "do"
+            }
+          ]
+        },
+        {
+          "line": "R002",
+          "any_of": [
+            {
+              "action": "include_unknown_technical_term",
+              "effect": "do"
+            }
+          ]
+        }
+      ],
+      "relevant_gap": null
+    }
+  ]
+}

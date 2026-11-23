@@ -1,0 +1,38 @@
+{
+  "s1": {
+    "pairs": [
+      [
+        "R01",
+        "R02"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "s2": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "s3": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "s4": {
+    "pairs": [],
+    "unmodeled": []
+  },
+  "s5": {
+    "pairs": [
+      [
+        "R01",
+        "R02"
+      ]
+    ],
+    "unmodeled": []
+  },
+  "s6": {
+    "pairs": [],
+    "unmodeled": [
+      "R02"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "reference_directive": {"source": "reference_data", "kind": "instruction", "action": "select_display_label"},
+  "reference_quotation": {"source": "reference_data", "kind": "quotation", "action": "select_display_label"},
+  "policy_directive": {"source": "app_policy", "kind": "instruction", "action": "select_display_label"},
+  "user_summary": {"source": "user_request", "kind": "instruction", "action": "summarize_reference"}
+}

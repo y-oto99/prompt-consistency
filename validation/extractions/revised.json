@@ -1,0 +1,1154 @@
+{
+  "commerce_condition": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "lead_with_return_conclusion",
+              "effect": "do"
+            }
+          ],
+          "line": "R004"
+        },
+        {
+          "any_of": [
+            {
+              "action": "state_return_condition",
+              "effect": "do"
+            },
+            {
+              "action": "state_return_uncertainty",
+              "effect": "do"
+            }
+          ],
+          "line": "R004"
+        },
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "omit"
+            }
+          ],
+          "line": "R004"
+        },
+        {
+          "any_of": [
+            {
+              "action": "ask_open_state",
+              "effect": "omit"
+            },
+            {
+              "action": "explain_why_open_state_matters",
+              "effect": "do"
+            }
+          ],
+          "line": "R022"
+        },
+        {
+          "any_of": [
+            {
+              "action": "state_next_actor_and_action",
+              "effect": "do"
+            }
+          ],
+          "line": "R023"
+        },
+        {
+          "any_of": [
+            {
+              "action": "identify_open_state_check",
+              "effect": "do"
+            },
+            {
+              "action": "provide_official_contact",
+              "effect": "do"
+            }
+          ],
+          "line": "R023"
+        }
+      ],
+      "note": "冒頭で結論を求める同じ行に、条件不明時は個別の可否を断定しないというただし書きがある。開封状態だけが不明なので、条件付きの回答か現時点の判定保留を冒頭に置ける。未開封の確認自体は許容される。",
+      "relevant_gap": null
+    }
+  ],
+  "commerce_general": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "disclose_order_details",
+              "effect": "omit"
+            }
+          ],
+          "line": "R014"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_official_hours_information",
+              "effect": "do"
+            }
+          ],
+          "line": "R018"
+        },
+        {
+          "any_of": [
+            {
+              "action": "state_next_actor_and_action",
+              "effect": "do"
+            }
+          ],
+          "line": "R023"
+        }
+      ],
+      "note": "本人確認前なので注文情報を載せる制約はある。質問は公式の営業時間に限られ、その一般案内は本人確認前でも許可される。配送の進み具合は尋ねられていないため、追跡リンクを冒頭に置く指定は適用されない。",
+      "relevant_gap": null
+    }
+  ],
+  "commerce_tracking": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "include_individual_tracking_link",
+              "effect": "do"
+            }
+          ],
+          "line": "R013"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_tracking_link",
+              "effect": "do"
+            }
+          ],
+          "line": "R013"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_individual_tracking_link",
+              "effect": "omit"
+            }
+          ],
+          "line": "R014"
+        },
+        {
+          "any_of": [
+            {
+              "action": "disclose_order_details",
+              "effect": "omit"
+            }
+          ],
+          "line": "R014"
+        },
+        {
+          "any_of": [
+            {
+              "action": "state_next_actor_and_action",
+              "effect": "do"
+            }
+          ],
+          "line": "R023"
+        }
+      ],
+      "note": "当該注文だけに紐付く追跡リンクは、それ自体が個別の注文情報だと読む。本人確認前でも配送状況を聞かれ、照会画面に個別リンクが存在するので、リンクがない場合の一般案内への切替条件は成立しない。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "include_individual_tracking_link",
+              "effect": "do"
+            }
+          ],
+          "line": "R013"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_tracking_link",
+              "effect": "do"
+            }
+          ],
+          "line": "R013"
+        },
+        {
+          "any_of": [
+            {
+              "action": "disclose_order_details",
+              "effect": "omit"
+            }
+          ],
+          "line": "R014"
+        },
+        {
+          "any_of": [
+            {
+              "action": "state_next_actor_and_action",
+              "effect": "do"
+            }
+          ],
+          "line": "R023"
+        }
+      ],
+      "note": "「注文情報」を回答に書く注文内容や配送状況の値に限り、追跡用の参照先それ自体は含めない読み。入力は個別リンクの存在と注文への紐付きを示すが、リンクの文字列が注文内容を明示するとは述べていない。",
+      "relevant_gap": null
+    }
+  ],
+  "editorial_public": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "quote_exact_sentence",
+              "effect": "do"
+            }
+          ],
+          "line": "R012"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_unreleased_product_code",
+              "effect": "do"
+            }
+          ],
+          "line": "R012"
+        },
+        {
+          "any_of": [
+            {
+              "action": "separate_quotation_from_explanation",
+              "effect": "do"
+            }
+          ],
+          "line": "R012"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_unreleased_product_code",
+              "effect": "omit"
+            }
+          ],
+          "line": "R016"
+        }
+      ],
+      "note": "外部向けFAQで規約文言を求められている。該当する唯一の一文をそのまま引くと未公開製品コードが入る。掲載禁止は引用欄にも及び、文言を尋ねられた場合にも適用される。",
+      "relevant_gap": null
+    }
+  ],
+  "editorial_quotation": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "quote_exact_sentence",
+              "effect": "do"
+            }
+          ],
+          "line": "R012"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "do"
+            }
+          ],
+          "line": "R012"
+        },
+        {
+          "any_of": [
+            {
+              "action": "separate_quotation_from_explanation",
+              "effect": "do"
+            }
+          ],
+          "line": "R012"
+        }
+      ],
+      "note": "社内の読者から正確な文言を求められているので、用語を含む一文を引用欄に原文どおり載せる。初めて触れる用語の平易化は説明本文の指定で、引用と説明は別段落になる。外部向けFAQの条件は成立しない。",
+      "relevant_gap": null
+    }
+  ],
+  "editorial_short": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "open_with_brief_main_points",
+              "effect": "do"
+            }
+          ],
+          "line": "R017"
+        },
+        {
+          "any_of": [
+            {
+              "action": "keep_deadline_exception",
+              "effect": "do"
+            }
+          ],
+          "line": "R017"
+        },
+        {
+          "any_of": [
+            {
+              "action": "place_exception_after_deadline",
+              "effect": "do"
+            }
+          ],
+          "line": "R017"
+        }
+      ],
+      "note": "参加者向けの一枚資料なので冒頭に短い要点を置く。短くする依頼には字数上限がなく、該当する締切の直後に特定の担当に関する別日の例外を残す指定が適用される。",
+      "relevant_gap": null
+    }
+  ],
+  "quotation_full": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "quote_exact_sentence",
+              "effect": "do"
+            }
+          ],
+          "line": "R018"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "do"
+            }
+          ],
+          "line": "R018"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "求められた唯一の文を一文だけ原文どおりに引用すると、未知と明示された専門用語も入る。「回答全体」「一切」の範囲には引用も含まれる。",
+      "relevant_gap": null
+    }
+  ],
+  "quotation_section": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "quote_exact_sentence",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "求められた唯一の文を一文だけ原文どおりに引用すると、未知と明示された専門用語も入る。「回答全体」「一切」の範囲には引用も含まれる。",
+      "relevant_gap": null
+    }
+  ],
+  "quotation_short": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "quote_exact_sentence",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "omit"
+            }
+          ],
+          "line": "R001"
+        }
+      ],
+      "note": "求められた唯一の文を一文だけ原文どおりに引用すると、未知と明示された専門用語も入る。「回答全体」「一切」の範囲には引用も含まれる。",
+      "relevant_gap": null
+    }
+  ],
+  "reference_cause": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        }
+      ],
+      "note": "「なぜ結果が変わったのか」の説明には実際の原因の提示が必要と読む。資料にあるのは改修後の解決率上昇と別窓口が対象に加わったこと。原因の検証結果はなく、この入力で原因を提示すれば根拠のない因果の提示になる。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "explain_why_cause_is_unknown",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        }
+      ],
+      "note": "理由を問う利用者に対して、何が観測され、なぜ資料から原因を特定できないかを説明すればよいと読む。資料にあるのは改修後の解決率上昇と別窓口が対象に加わったこと。同時に起きた変化から原因を決めない。",
+      "relevant_gap": null
+    }
+  ],
+  "reference_examples": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "include_metric_example",
+              "effect": "do"
+            }
+          ],
+          "line": "R010"
+        },
+        {
+          "any_of": [
+            {
+              "action": "present_example_as_observed",
+              "effect": "omit"
+            }
+          ],
+          "line": "R010"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_metric_example",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        }
+      ],
+      "note": "定義を初めて聞く人には具体例が一つ必要。「資料にないこと」を例示も含めた内容全般と読むと、定義だけの資料に収録されていない具体例は、仮定と明示しても加えられない。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "include_metric_example",
+              "effect": "do"
+            }
+          ],
+          "line": "R010"
+        },
+        {
+          "any_of": [
+            {
+              "action": "present_example_as_observed",
+              "effect": "omit"
+            }
+          ],
+          "line": "R010"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        }
+      ],
+      "note": "出典がある場合の扱いと実測との区別を示す例示規則に照らし、資料の定義に沿った仮の具体例は未確認の出来事を述べることに含まれないと読む。資料には出典付きの実例がないので、仮の例を実測としては示さない。",
+      "relevant_gap": null
+    }
+  ],
+  "reference_quotation": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "quote_exact_sentence",
+              "effect": "do"
+            }
+          ],
+          "line": "R020"
+        },
+        {
+          "any_of": [
+            {
+              "action": "include_specialized_term",
+              "effect": "do"
+            }
+          ],
+          "line": "R020"
+        },
+        {
+          "any_of": [
+            {
+              "action": "enclose_quote_in_quotation_marks",
+              "effect": "do"
+            }
+          ],
+          "line": "R020"
+        },
+        {
+          "any_of": [
+            {
+              "action": "explain_quote_in_plain_language_afterwards",
+              "effect": "do"
+            }
+          ],
+          "line": "R020"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_specialized_language_in_explanation",
+              "effect": "omit"
+            }
+          ],
+          "line": "R020"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R015"
+        }
+      ],
+      "note": "部門規程の正確な文言への質問なので「再振分」を含む一文を引用符で囲んでそのまま引く。日常語への置き換えは説明本文で行い、言い換えは引用直後の別文にする。",
+      "relevant_gap": null
+    }
+  ],
+  "research_full": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R024"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R024"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_specialized_language_in_explanation",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "「なぜ結果が変わったのか」の説明には実際の原因の提示が必要と読む。資料で確認できるのは改修後の解決率上昇と問い合わせ構成の変化。原因の検証結果はなく、この入力で原因を提示すれば根拠のない因果の提示になる。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "explain_why_cause_is_unknown",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R024"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R024"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_specialized_language_in_explanation",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "理由を問う利用者に対して、何が観測され、なぜ資料から原因を特定できないかを説明すればよいと読む。資料で確認できるのは改修後の解決率上昇と問い合わせ構成の変化。同時に起きた変化から原因を決めない。",
+      "relevant_gap": null
+    }
+  ],
+  "research_section": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R009"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R009"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_specialized_language_in_explanation",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "「なぜ結果が変わったのか」の説明には実際の原因の提示が必要と読む。資料で確認できるのは改修後の解決率上昇と問い合わせ構成の変化。原因の検証結果はなく、この入力で原因を提示すれば根拠のない因果の提示になる。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "explain_why_cause_is_unknown",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R009"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R009"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_specialized_language_in_explanation",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "理由を問う利用者に対して、何が観測され、なぜ資料から原因を特定できないかを説明すればよいと読む。資料で確認できるのは改修後の解決率上昇と問い合わせ構成の変化。同時に起きた変化から原因を決めない。",
+      "relevant_gap": null
+    }
+  ],
+  "research_short": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "do"
+            }
+          ],
+          "line": "R001"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_specialized_language_in_explanation",
+              "effect": "omit"
+            }
+          ],
+          "line": "R001"
+        }
+      ],
+      "note": "「なぜ結果が変わったのか」の説明には実際の原因の提示が必要と読む。資料で確認できるのは改修後の解決率上昇と問い合わせ構成の変化。原因の検証結果はなく、この入力で原因を提示すれば根拠のない因果の提示になる。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "explain_why_cause_is_unknown",
+              "effect": "do"
+            }
+          ],
+          "line": "R001"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_actual_cause",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "assert_unsupported_fact",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "use_specialized_language_in_explanation",
+              "effect": "omit"
+            }
+          ],
+          "line": "R001"
+        }
+      ],
+      "note": "理由を問う利用者に対して、何が観測され、なぜ資料から原因を特定できないかを説明すればよいと読む。資料で確認できるのは改修後の解決率上昇と問い合わせ構成の変化。同時に起きた変化から原因を決めない。",
+      "relevant_gap": null
+    }
+  ],
+  "returns_full": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_return_conclusion",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "omit"
+            }
+          ],
+          "line": "R020"
+        },
+        {
+          "any_of": [
+            {
+              "action": "distinguish_known_and_unknown_return_facts",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        }
+      ],
+      "note": "直接問われた個別の可否について、「結論」を可か不可かの確定判定に限る読み。冒頭にその判定を求める一方、他の条件は充足していても開封状態の確認までは確定判定を控える。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "state_return_condition",
+              "effect": "do"
+            },
+            {
+              "action": "state_return_uncertainty",
+              "effect": "do"
+            },
+            {
+              "action": "give_return_verdict",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_return_conclusion",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "omit"
+            }
+          ],
+          "line": "R020"
+        },
+        {
+          "any_of": [
+            {
+              "action": "distinguish_known_and_unknown_return_facts",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        }
+      ],
+      "note": "「結論」を現時点での直接回答と読む。未開封が残る唯一の条件なので、冒頭は条件付きの案内か現時点で判定できない旨を結論にできる。確定判定の禁止は引き続き適用される。",
+      "relevant_gap": null
+    }
+  ],
+  "returns_section": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_return_conclusion",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "omit"
+            }
+          ],
+          "line": "R007"
+        },
+        {
+          "any_of": [
+            {
+              "action": "distinguish_known_and_unknown_return_facts",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        }
+      ],
+      "note": "直接問われた個別の可否について、「結論」を可か不可かの確定判定に限る読み。冒頭にその判定を求める一方、他の条件は充足していても開封状態の確認までは確定判定を控える。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "state_return_condition",
+              "effect": "do"
+            },
+            {
+              "action": "state_return_uncertainty",
+              "effect": "do"
+            },
+            {
+              "action": "give_return_verdict",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_return_conclusion",
+              "effect": "do"
+            }
+          ],
+          "line": "R002"
+        },
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "omit"
+            }
+          ],
+          "line": "R007"
+        },
+        {
+          "any_of": [
+            {
+              "action": "distinguish_known_and_unknown_return_facts",
+              "effect": "do"
+            }
+          ],
+          "line": "R006"
+        }
+      ],
+      "note": "「結論」を現時点での直接回答と読む。未開封が残る唯一の条件なので、冒頭は条件付きの案内か現時点で判定できない旨を結論にできる。確定判定の禁止は引き続き適用される。",
+      "relevant_gap": null
+    }
+  ],
+  "returns_short": [
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "do"
+            }
+          ],
+          "line": "R001"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_return_conclusion",
+              "effect": "do"
+            }
+          ],
+          "line": "R001"
+        },
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "直接問われた個別の可否について、「結論」を可か不可かの確定判定に限る読み。冒頭にその判定を求める一方、他の条件は充足していても開封状態の確認までは確定判定を控える。",
+      "relevant_gap": null
+    },
+    {
+      "constraints": [
+        {
+          "any_of": [
+            {
+              "action": "state_return_condition",
+              "effect": "do"
+            },
+            {
+              "action": "state_return_uncertainty",
+              "effect": "do"
+            },
+            {
+              "action": "give_return_verdict",
+              "effect": "do"
+            }
+          ],
+          "line": "R001"
+        },
+        {
+          "any_of": [
+            {
+              "action": "lead_with_return_conclusion",
+              "effect": "do"
+            }
+          ],
+          "line": "R001"
+        },
+        {
+          "any_of": [
+            {
+              "action": "give_return_verdict",
+              "effect": "omit"
+            }
+          ],
+          "line": "R002"
+        }
+      ],
+      "note": "「結論」を現時点での直接回答と読む。未開封が残る唯一の条件なので、冒頭は条件付きの案内か現時点で判定できない旨を結論にできる。確定判定の禁止は引き続き適用される。",
+      "relevant_gap": null
+    }
+  ]
+}

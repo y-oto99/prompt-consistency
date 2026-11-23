@@ -1,0 +1,30 @@
+{
+  "context": {
+    "contact_guidance_requested": [
+      "yes",
+      "no"
+    ]
+  },
+  "rules": [
+    {
+      "id": "q1",
+      "sources": [
+        "R01"
+      ],
+      "when": {
+        "contact_guidance_requested": "yes"
+      },
+      "unless": [],
+      "action": "include_contact_link",
+      "effect": "require"
+    }
+  ],
+  "unmodeled": [
+    {
+      "sources": [
+        "R02"
+      ],
+      "reason": "「長すぎる」の判定基準が定義されていない。"
+    }
+  ]
+}
